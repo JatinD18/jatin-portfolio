@@ -35,9 +35,12 @@ export default function Projects() {
             transition={{ delay: index * 0.1 }}
             className="bg-gray-900 border border-gray-800 rounded-xl overflow-hidden hover:border-blue-500/50 transition duration-300 flex flex-col"
           >
-            <div className="h-48 bg-gray-800 flex items-center justify-center">
-              <span className="text-gray-600 text-sm">Project Screenshot</span>
-            </div>
+            {/* This is the actual image rendering */}
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className="w-full h-48 object-cover bg-gray-800"
+            />
 
             <div className="p-6 flex flex-col flex-1">
               <p className="text-blue-400 text-xs font-medium uppercase tracking-wider mb-1">
