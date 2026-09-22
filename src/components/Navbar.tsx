@@ -23,10 +23,10 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-gray-950/90 backdrop-blur-md border-b border-gray-800"
-          : "bg-transparent"
-      }`}
+      scrolled
+        ? "bg-gray-950/90 backdrop-blur-md border-b border-gray-800 shadow-lg shadow-blue-500/10"
+        : "bg-transparent"
+    }`}
     >
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#home" className="text-xl font-bold text-white">
