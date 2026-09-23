@@ -7,137 +7,92 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 relative overflow-hidden bg-gray-950"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Safe, error-free subtle background glow */}
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          background: "radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 50%), radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.15), transparent 50%)"
-        }}
-      />
-      
-      <div className="relative z-10 max-w-4xl mx-auto">
-        {/* Profile Picture with Animation */}
+      {/* Background overlay for noise/texture */}
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] z-0 pointer-events-none" />
+
+      {/* Main Content Container */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center select-none pt-20">
+        
+        {/* Massive Background Typography */}
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8, type: "spring" }}
-          className="mb-8 relative inline-block"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-full text-center pointer-events-none mt-10"
         >
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl shadow-blue-500/30">
+          <h1 className="text-[16vw] md:text-[12vw] lg:text-[14rem] font-black tracking-tighter text-transparent bg-clip-text bg-linear-to-b from-white via-gray-300 to-gray-800 drop-shadow-2xl leading-none uppercase">
+            PORTFOLIO
+          </h1>
+        </motion.div>
+
+        {/* Center Parallax Element (Profile Picture) */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+          className="relative z-20 flex flex-col items-center mt-8 md:mt-20"
+        >
+          <div className="w-64 md:w-80 lg:w-96" style={{ filter: "drop-shadow(0 20px 50px rgba(0,0,0,0.8))" }}>
             <Image
-              src="/profile.jpg" 
+              src="/ai_half_body.png" 
               alt={personalInfo.name}
-              width={160}
-              height={160}
-              className="object-cover"
+              width={512}
+              height={512}
+              className="object-contain w-full h-auto transition-all duration-700"
               priority
             />
           </div>
-          {/* Animated ring around profile */}
-          <div className="absolute inset-0 rounded-full border-2 border-blue-400 animate-ping opacity-75" />
         </motion.div>
 
-        {/* Welcome Text */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-blue-400 font-medium mb-4 text-sm tracking-widest uppercase"
-        >
-          Welcome to my portfolio
-        </motion.p>
-
-        {/* Name with Safe, Error-Free Styling */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
-        >
-          Hi, I&apos;m{" "}
-          <span 
-            className="text-blue-400"
-            style={{
-              backgroundImage: "linear-gradient(to right, #60a5fa, #a855f7)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
-            }}
-          >
-            {personalInfo.name}
-          </span>
-        </motion.h1>
-
-        {/* Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="text-xl md:text-2xl text-gray-400 mb-6"
-        >
-          {personalInfo.title}
-        </motion.h2>
-
-        {/* Bio */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="text-gray-400 max-w-2xl mb-10 text-base md:text-lg leading-relaxed mx-auto"
-        >
-          {personalInfo.bio}
-        </motion.p>
-
-        {/* CTA Buttons with Hover Effects */}
+        {/* Name and Title Text Overlays */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="flex flex-wrap gap-4 justify-center"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="relative z-20 mt-8 text-center"
         >
-          <motion.a
-            href="#projects"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition flex items-center gap-2 shadow-lg shadow-blue-500/20"
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-2 uppercase">
+            {personalInfo.name}
+          </h2>
+          <p className="text-white text-base md:text-2xl lg:text-3xl drop-shadow-md">
+            <span className="font-bold">Data</span> <span className="font-light italic text-gray-300">Analyst</span>
+            <span className="mx-3 text-gray-500 font-thin">|</span>
+            <span className="font-bold">Electrical</span> <span className="font-light italic text-gray-300">Engineer</span>
+          </p>
+        </motion.div>
+
+        {/* Glassmorphic CTAs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          className="relative z-20 mt-12 flex items-center gap-4 pointer-events-auto"
+        >
+          {/* Circular Icon Button */}
+          <a 
+            href="#projects" 
+            className="group w-12 h-12 md:w-14 md:h-14 rounded-full border border-gray-400/30 flex items-center justify-center backdrop-blur-md bg-white/5 hover:bg-white/10 hover:border-gray-400/50 transition-all duration-300 cursor-pointer shadow-lg"
           >
-            View Projects
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            <svg className="w-4 h-4 md:w-5 md:h-5 text-gray-300 transition-transform duration-300 group-hover:rotate-45" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M17 7L7 17M7 17H16M7 17V8" />
             </svg>
-          </motion.a>
+          </a>
           
-          <motion.a
+          {/* Pill Button */}
+          <a 
             href={personalInfo.resumeLink}
             download
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="border border-gray-600 hover:border-white text-white px-8 py-3 rounded-lg font-medium transition flex items-center gap-2"
+            className="px-6 py-3 md:px-8 md:py-3.5 rounded-full border border-gray-400/30 flex items-center justify-center backdrop-blur-md bg-white/5 hover:bg-white/10 hover:border-gray-400/50 transition-all cursor-pointer shadow-lg"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            Resume
-          </motion.a>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center pt-2"
-          >
-            <div className="w-1 h-2 bg-blue-500 rounded-full" />
-          </motion.div>
+            <span className="text-gray-300 text-sm md:text-base italic font-light tracking-wider">
+              Download Resume
+            </span>
+          </a>
         </motion.div>
       </div>
+
     </section>
   );
 }

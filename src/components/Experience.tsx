@@ -35,15 +35,15 @@ export default function Experience() {
             transition={{ delay: index * 0.15 }}
             className="mb-10 ml-8 relative"
           >
-            <div className="absolute -left-10 top-1 w-5 h-5 bg-blue-500 rounded-full border-4 border-gray-950" />
+            <div className="absolute -left-10 top-1 w-5 h-5 bg-gray-400 rounded-full border-4 border-black" />
 
             <div className="flex items-center gap-2 mb-1">
-              <Briefcase size={16} className="text-blue-400" />
+              <Briefcase size={16} className="text-gray-400" />
               <span className="text-sm text-gray-500">{exp.period}</span>
             </div>
 
             <h3 className="text-xl font-bold text-white">{exp.role}</h3>
-            <p className="text-blue-400 font-medium mb-3">{exp.company}</p>
+            <p className="text-gray-300 font-medium mb-3">{exp.company}</p>
 
             <ul className="space-y-2">
               {exp.highlights.map((item, i) => (
@@ -51,7 +51,7 @@ export default function Experience() {
                   key={i}
                   className="text-gray-400 text-sm leading-relaxed flex gap-2"
                 >
-                  <span className="text-blue-400 mt-1">▸</span>
+                  <span className="text-gray-500 mt-1">▸</span>
                   {item}
                 </li>
               ))}

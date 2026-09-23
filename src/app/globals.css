@@ -5,31 +5,33 @@ html {
 }
 
 body {
-  background-color: #030712;
+  background-color: #000;
   overflow-x: hidden;
+  /* Add Leeshark style background noise/gradient to body */
+  background: radial-gradient(circle at center, rgb(34, 34, 34) 0%, rgb(0, 0, 0) 80%);
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #111827;
+  background: #000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 5px;
+  background: #333;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+  background: #555;
 }
 
 /* Selection Color */
 ::selection {
-  background-color: #3b82f6;
+  background-color: rgba(255, 255, 255, 0.2);
   color: white;
 }
 

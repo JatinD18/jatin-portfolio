@@ -34,20 +34,20 @@ export default function Contact() {
         >
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-gray-300">
-              <Mail size={18} className="text-blue-400" />
+              <Mail size={18} className="text-white" />
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="hover:text-blue-400 transition"
+                className="hover:text-white transition"
               >
                 {personalInfo.email}
               </a>
             </div>
             <div className="flex items-center gap-3 text-gray-300">
-              <Phone size={18} className="text-blue-400" />
+              <Phone size={18} className="text-white" />
               <span>{personalInfo.phone}</span>
             </div>
             <div className="flex items-center gap-3 text-gray-300">
-              <MapPin size={18} className="text-blue-400" />
+              <MapPin size={18} className="text-white" />
               <span>{personalInfo.location}</span>
             </div>
           </div>
@@ -66,25 +66,25 @@ export default function Contact() {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"
+            className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition"
+            className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition"
           />
           <textarea
             name="message"
             rows={5}
             placeholder="Your Message"
             required
-            className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 transition resize-none"
+            className="w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-white transition resize-none"
           />
           <button
             type="submit"
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg font-medium transition flex items-center justify-center gap-2"
+            className="w-full bg-white text-black hover:bg-gray-200 py-3 rounded-lg font-medium transition flex items-center justify-center gap-2"
           >
             <Send size={16} /> Send Message
           </button>
