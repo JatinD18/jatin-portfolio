@@ -108,6 +108,16 @@ export const personalInfo = {
       githubLink: "#",
       image: "/electronic-sales.png",
     },
+    {
+      title: "Store Item Demand Forecasting",
+      subtitle: "Machine Learning (Python)",
+      description:
+        "Developed a machine learning model to forecast item sales across multiple stores using historical sales data. Performed extensive exploratory data analysis to identify seasonal trends and optimize inventory management.",
+      tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Jupyter"],
+      liveLink: "#",
+      githubLink: "#",
+      image: "/electronic-sales.png", // Reusing an existing image as a placeholder
+    },
   ];
   
   export const education = [
