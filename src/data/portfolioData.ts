@@ -95,7 +95,7 @@ export const personalInfo = {
         "Built an interactive Power BI dashboard using time-series analysis to generate forward-looking sales forecasts. Delivered strategic insights across product categories and regions, enabling data-backed growth planning from a single visual interface.",
       tech: ["Power BI", "Time-Series Analysis", "DAX", "Data Modelling"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/JatinD18/SuperStore_Sales_Report-PowerBI",
       image: "/superstore-dashboard.png",
     },
     {
@@ -105,7 +105,7 @@ export const personalInfo = {
         "Analysed 12 months of electronics transaction data using Pandas, NumPy, Matplotlib, and Seaborn. Identified peak sales periods, top-performing geographic markets, and optimal advertising windows—three insights with direct revenue impact.",
       tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
       liveLink: "#",
-      githubLink: "#",
+      githubLink: "https://github.com/JatinD18/Electronic_Sales_Analysis-Python",
       image: "/electronic-sales.png",
     },
     {
@@ -114,9 +114,9 @@ export const personalInfo = {
       description:
         "Developed a machine learning model to forecast item sales across multiple stores using historical sales data. Performed extensive exploratory data analysis to identify seasonal trends and optimize inventory management.",
       tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Jupyter"],
-      liveLink: "#",
-      githubLink: "#",
-      image: "/inventory-app-screenshot.png",
+      liveLink: "https://inventory-optimization-dashboard.streamlit.app/",
+      githubLink: "https://github.com/JatinD18/Inventory-Optimization-Dashboard",
+      image: "/electronic-sales.png", // Reusing an existing image as a placeholder
     },
   ];
   
