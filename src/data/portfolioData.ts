@@ -116,7 +116,7 @@ export const personalInfo = {
       tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Jupyter"],
       liveLink: "#",
       githubLink: "#",
-      image: "/electronic-sales.png", // Reusing an existing image as a placeholder
+      image: "/inventory-app-screenshot.png",
     },
   ];
   
