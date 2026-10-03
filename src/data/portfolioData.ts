@@ -116,7 +116,7 @@ export const personalInfo = {
       tech: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Jupyter"],
       liveLink: "https://inventory-optimization-dashboard.streamlit.app/",
       githubLink: "https://github.com/JatinD18/Inventory-Optimization-Dashboard",
-      image: "/electronic-sales.png", // Reusing an existing image as a placeholder
+      image: "/inventory-optimization-dashboard.png",
     },
     {
       title: "Financial Performance Dashboard",
