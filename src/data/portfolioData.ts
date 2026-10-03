@@ -118,6 +118,15 @@ export const personalInfo = {
       githubLink: "https://github.com/JatinD18/Inventory-Optimization-Dashboard",
       image: "/electronic-sales.png", // Reusing an existing image as a placeholder
     },
+    {
+      title: "Financial Performance Dashboard",
+      subtitle: "Python, Pandas & Plotly",
+      description: "Engineered an enterprise-grade Star Schema data pipeline merging 7 relational tables. Built an interactive financial dashboard tracking $45M+ in revenue, analyzing profit margins, YoY growth, and regional performance to surface actionable business insights.",
+      tech: ["Python", "Pandas", "Plotly", "Streamlit", "Data Modeling"],
+      image: "/financial-dashboard-python.png",
+      liveLink: "https://financial-dashboard-py-str.streamlit.app/",
+      githubLink: "https://github.com/JatinD18/Financial-Dashboard-Python"
+    },
   ];
   
   export const education = [
