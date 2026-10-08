@@ -127,6 +127,15 @@ export const personalInfo = {
       liveLink: "https://financial-dashboard-py-str.streamlit.app/",
       githubLink: "https://github.com/JatinD18/Financial-Dashboard-Python"
     },
+    {
+    title: "Customer Segmentation & CLV Analysis",
+    subtitle: "Machine Learning & Marketing Analytics",
+    description: "Segmented 4,300+ customers using RFM analysis and K-Means clustering, then predicted 6-month Customer Lifetime Value with BG/NBD and Gamma-Gamma models. Deployed as an immersive, interactive dark-themed dashboard with segment-level marketing strategies.",
+    tech: ["Python", "Pandas", "Scikit-Learn", "Lifetimes", "Streamlit", "Plotly"],
+    image: "/customer-segmentation.png",
+    liveLink: "https://customer-segmentation-clv-ml.streamlit.app/",
+    githubLink: "https://github.com/JatinD18/Customer-Segmentation-CLV"
+    },
   ];
   
   export const education = [
